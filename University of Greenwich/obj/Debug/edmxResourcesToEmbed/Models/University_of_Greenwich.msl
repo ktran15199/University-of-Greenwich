@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="University_of_GreenwichModelStoreContainer" CdmEntityContainer="University_of_GreenwichEntities">
+    <EntitySetMapping Name="CCs">
+      <EntityTypeMapping TypeName="University_of_GreenwichModel.CC">
+        <MappingFragment StoreEntitySet="CC">
+          <ScalarProperty Name="CCID" ColumnName="CCID" />
+          <ScalarProperty Name="CCName" ColumnName="CCName" />
+          <ScalarProperty Name="CCDescription" ColumnName="CCDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="University_of_GreenwichModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseDescription" ColumnName="CourseDescription" />
+          <ScalarProperty Name="CCID" ColumnName="CCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enrollments">
+      <EntityTypeMapping TypeName="University_of_GreenwichModel.Enrollment">
+        <MappingFragment StoreEntitySet="Enrollment">
+          <ScalarProperty Name="EnrollmentID" ColumnName="EnrollmentID" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Topics">
+      <EntityTypeMapping TypeName="University_of_GreenwichModel.Topic">
+        <MappingFragment StoreEntitySet="Topic">
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="TopicName" ColumnName="TopicName" />
+          <ScalarProperty Name="TopicDescription" ColumnName="TopicDescription" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="TrainerID" ColumnName="TrainerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainees">
+      <EntityTypeMapping TypeName="University_of_GreenwichModel.Trainee">
+        <MappingFragment StoreEntitySet="Trainee">
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+          <ScalarProperty Name="TraineeName" ColumnName="TraineeName" />
+          <ScalarProperty Name="TraineeDOB" ColumnName="TraineeDOB" />
+          <ScalarProperty Name="TraineeAge" ColumnName="TraineeAge" />
+          <ScalarProperty Name="TraineeEducation" ColumnName="TraineeEducation" />
+          <ScalarProperty Name="TraineeTOEIC" ColumnName="TraineeTOEIC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainers">
+      <EntityTypeMapping TypeName="University_of_GreenwichModel.Trainer">
+        <MappingFragment StoreEntitySet="Trainer">
+          <ScalarProperty Name="TrainerID" ColumnName="TrainerID" />
+          <ScalarProperty Name="TrainerName" ColumnName="TrainerName" />
+          <ScalarProperty Name="TrainerType" ColumnName="TrainerType" />
+          <ScalarProperty Name="TrainerEducation" ColumnName="TrainerEducation" />
+          <ScalarProperty Name="TrainerPhone" ColumnName="TrainerPhone" />
+          <ScalarProperty Name="TrainerEmail" ColumnName="TrainerEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
